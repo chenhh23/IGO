@@ -24,10 +24,6 @@ import com.example.pedometer.igo.Speak.SpeakingTimer;
 import com.example.pedometer.igo.Utils.Preferences.PedometerSettings;
 import com.example.pedometer.igo.Utils.Utils;
 
-/**
- * Calculates and displays the approximate calories.  
- * @author Levente Bagi
- */
 public class CaloriesNotifier implements StepListener, SpeakingTimer.Listener {
 
     public interface Listener {
@@ -111,7 +107,7 @@ public class CaloriesNotifier implements StepListener, SpeakingTimer.Listener {
     public void speak() {
         if (mSettings.shouldTellCalories()) {
             if (mCalories > 0) {
-                mUtils.say("" + (int)mCalories + " calories burned");
+                mUtils.say("" + (int)mCalories + "卡路里燃烧");
             }
         }
     }

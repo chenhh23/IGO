@@ -14,9 +14,6 @@ import com.example.pedometer.igo.Notifier.PaceNotifier;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by vvv98 on 2016/6/2.
- */
 public class WeatherDB {
     public static final String DB_NAME="weather";
     public static final int VERSION=1;

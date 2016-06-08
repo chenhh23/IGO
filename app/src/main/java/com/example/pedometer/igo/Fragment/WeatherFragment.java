@@ -23,9 +23,7 @@ import com.example.pedometer.igo.Utils.HttpCallbackListener;
 import com.example.pedometer.igo.Utils.HttpUtil;
 import com.example.pedometer.igo.Utils.Utility;
 
-/**
- * Created by vvv98 on 2016/6/3.
- */
+
 public class WeatherFragment extends Fragment {
     private Button switchCity;
     private Button refreshWeather;

@@ -16,9 +16,6 @@ import com.example.pedometer.igo.Utils.HttpCallbackListener;
 import com.example.pedometer.igo.Utils.HttpUtil;
 import com.example.pedometer.igo.Utils.Utility;
 
-/**
- * Created by vvv98 on 2016/6/4.
- */
 public class AutoUpdateService extends Service {
     @Override
     public IBinder onBind(Intent intent) {

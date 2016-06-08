@@ -24,10 +24,6 @@ import com.example.pedometer.igo.Speak.SpeakingTimer;
 import com.example.pedometer.igo.Utils.Preferences.PedometerSettings;
 import com.example.pedometer.igo.Utils.Utils;
 
-/**
- * Calculates and displays the distance walked.  
- * @author Levente Bagi
- */
 public class DistanceNotifier implements StepListener, SpeakingTimer.Listener {
 
     public interface Listener {
@@ -88,7 +84,7 @@ public class DistanceNotifier implements StepListener, SpeakingTimer.Listener {
     public void speak() {
         if (mSettings.shouldTellDistance()) {
             if (mDistance >= .001f) {
-                mUtils.say(("" + (mDistance + 0.000001f)).substring(0, 4) + (mIsMetric ? " kilometers" : " miles"));
+                mUtils.say(("" + (mDistance + 0.000001f)).substring(0, 4) + (mIsMetric ? "公里" : "英里"));
                 // TODO: format numbers (no "." at the end)
             }
         }

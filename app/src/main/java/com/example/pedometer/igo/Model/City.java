@@ -1,8 +1,5 @@
 package com.example.pedometer.igo.Model;
 
-/**
- * Created by vvv98 on 2016/6/1.
- */
 public class City {
     private int id;
     private String cityName;

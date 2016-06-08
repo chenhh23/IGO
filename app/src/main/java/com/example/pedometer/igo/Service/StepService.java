@@ -58,12 +58,7 @@ public class StepService extends Service {
     private float mDistance;
     private float mSpeed;
     private float mCalories;
-    
-    /**
-     * Class for clients to access.  Because we know this service always
-     * runs in the same process as its clients, we don't need to deal with
-     * IPC.
-     */
+
     public class StepBinder extends Binder {
         public StepService getService() {
             return StepService.this;

@@ -21,11 +21,6 @@ package com.example.pedometer.igo.Listener;
 import android.content.Context;
 import android.os.Vibrator;
 
-/**
- * Vibrates whenever a step is detected.
- * Normally, this is not attached, used for debugging purposes.
- * @author Levente Bagi
- */
 public class StepBuzzer implements StepListener {
     
     private Context mContext;

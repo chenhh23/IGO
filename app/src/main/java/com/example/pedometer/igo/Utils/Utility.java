@@ -20,9 +20,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-/**
- * Created by vvv98 on 2016/6/2.
- */
 public class Utility {
     private static final String TAG = "Pedometer";
     public synchronized static boolean handleProvincesResponse(WeatherDB weatherDB,String response) {

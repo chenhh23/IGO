@@ -25,11 +25,6 @@ import com.example.pedometer.igo.Utils.Utils;
 
 import java.util.ArrayList;
 
-/**
- * Calculates and displays pace (steps / minute), handles input of desired pace,
- * notifies user if he/she has to go faster or slower.  
- * @author Levente Bagi
- */
 public class PaceNotifier implements StepListener, SpeakingTimer.Listener {
 
     public interface Listener {
@@ -174,7 +169,7 @@ public class PaceNotifier implements StepListener, SpeakingTimer.Listener {
     public void speak() {
         if (mSettings.shouldTellPace()) {
             if (mPace > 0) {
-                mUtils.say(mPace + " steps per minute");
+                mUtils.say(mPace + "步每小时");
             }
         }
     }

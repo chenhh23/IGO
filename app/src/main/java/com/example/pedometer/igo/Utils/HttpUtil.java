@@ -15,9 +15,6 @@ import com.android.volley.toolbox.Volley;
 
 import java.io.UnsupportedEncodingException;
 
-/**
- * Created by vvv98 on 2016/6/2.
- */
 public class HttpUtil {
     public static String path;
 

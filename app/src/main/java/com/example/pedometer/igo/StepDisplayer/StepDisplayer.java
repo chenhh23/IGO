@@ -25,10 +25,6 @@ import com.example.pedometer.igo.Utils.Utils;
 
 import java.util.ArrayList;
 
-/**
- * Counts steps provided by StepDetector and passes the current
- * step count to the activity.
- */
 public class StepDisplayer implements StepListener, SpeakingTimer.Listener {
 
     private int mCount = 0;

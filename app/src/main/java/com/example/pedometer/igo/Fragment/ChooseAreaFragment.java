@@ -32,9 +32,6 @@ import com.example.pedometer.igo.Utils.Utility;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by vvv98 on 2016/4/4.
- */
 public class ChooseAreaFragment extends Fragment {
     @Nullable
     public static final int LEVEL_PROVINCE = 0;

@@ -4,9 +4,6 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-/**
- * Created by vvv98 on 2016/6/1.
- */
 public class WeatherOpenHelper extends SQLiteOpenHelper {
     public static final String CREATE_PROVINCE = "create table Province ("
                                                         +"id integer primary key autoincrement, "

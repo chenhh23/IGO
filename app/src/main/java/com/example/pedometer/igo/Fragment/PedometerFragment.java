@@ -28,9 +28,6 @@ import com.example.pedometer.igo.Settings;
 import com.example.pedometer.igo.Utils.Preferences.PedometerSettings;
 import com.example.pedometer.igo.Utils.Utils;
 
-/**
- * Created by vvv98 on 2016/6/1.
- */
 public class PedometerFragment  extends Fragment {
     private static final String TAG = "Pedometer";
     private SharedPreferences mSettings;
@@ -58,7 +55,6 @@ public class PedometerFragment  extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
     }
@@ -146,6 +142,7 @@ public class PedometerFragment  extends Fragment {
                 setDesiredPaceOrSpeed(mDesiredPaceOrSpeed);
             }
         });
+
         if (mMaintain != PedometerSettings.M_NONE) {
             ((TextView) getActivity().findViewById(R.id.desired_pace_label)).setText(
                     mMaintain == PedometerSettings.M_PACE

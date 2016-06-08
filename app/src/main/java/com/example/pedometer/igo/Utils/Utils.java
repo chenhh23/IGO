@@ -7,9 +7,6 @@ import android.util.Log;
 
 import java.util.Locale;
 
-/**
- * Created by vvv98 on 2016/5/27.
- */
 public class Utils implements TextToSpeech.OnInitListener{
     private static final String TAG = "Utils";
     private Service mService;
@@ -50,7 +47,7 @@ public class Utils implements TextToSpeech.OnInitListener{
     @Override
     public void onInit(int status) {
         if(status==TextToSpeech.SUCCESS) {
-            int result = mTts.setLanguage(Locale.US);
+            int result = mTts.setLanguage(Locale.CHINA);
             if(result==TextToSpeech.LANG_MISSING_DATA||result==TextToSpeech.LANG_NOT_SUPPORTED) {
                 Log.e(TAG, "Language is not available");
             } else {

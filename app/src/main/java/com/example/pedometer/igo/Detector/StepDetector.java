@@ -28,11 +28,6 @@ import android.util.Log;
 
 import com.example.pedometer.igo.Listener.StepListener;
 
-/**
- * Detects steps and notifies all listeners (that implement StepListener).
- * @author Levente Bagi
- * @todo REFACTOR: SensorListener is deprecated
- */
 public class StepDetector implements SensorEventListener
 {
     private final static String TAG = "StepDetector";

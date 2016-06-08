@@ -24,11 +24,6 @@ import com.example.pedometer.igo.Utils.Utils;
 
 import java.util.ArrayList;
 
-/**
- * Call all listening objects repeatedly. 
- * The interval is defined by the user settings.
- * @author Levente Bagi
- */
 public class SpeakingTimer implements StepListener {
 
     PedometerSettings mSettings;

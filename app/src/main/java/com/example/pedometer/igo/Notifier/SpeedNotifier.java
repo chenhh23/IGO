@@ -23,14 +23,6 @@ import com.example.pedometer.igo.Speak.SpeakingTimer;
 import com.example.pedometer.igo.Utils.Preferences.PedometerSettings;
 import com.example.pedometer.igo.Utils.Utils;
 
-/**
- * Calculates and displays pace (steps / minute), handles input of desired pace,
- * notifies user if he/she has to go faster or slower.
- * 
- * Uses {@link PaceNotifier}, calculates speed as product of pace and step length.
- * 
- * @author Levente Bagi
- */
 public class SpeedNotifier implements PaceNotifier.Listener, SpeakingTimer.Listener {
 
     public interface Listener {
@@ -153,7 +145,7 @@ public class SpeedNotifier implements PaceNotifier.Listener, SpeakingTimer.Liste
     public void speak() {
         if (mSettings.shouldTellSpeed()) {
             if (mSpeed >= .01f) {
-                mUtils.say(("" + (mSpeed + 0.000001f)).substring(0, 4) + (mIsMetric ? " kilometers per hour" : " miles per hour"));
+                mUtils.say(("" + (mSpeed + 0.000001f)).substring(0, 4) + (mIsMetric ? "公里每小时" : "英里每小时"));
             }
         }
         
