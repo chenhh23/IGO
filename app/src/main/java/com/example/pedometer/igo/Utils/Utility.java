@@ -101,10 +101,8 @@ public class Utility {
         editor.putString("temp1", temp1);
         editor.putString("temp2", temp2);
         editor.putString("weather_desp", weatherDesp);
-        Log.d(TAG,  weatherDesp);
         editor.putString("publish_time", publishTime);
         editor.putString("current_date",sdf.format(new Date()));
-        Log.d(TAG, "commit");
         editor.commit();
     }
 }

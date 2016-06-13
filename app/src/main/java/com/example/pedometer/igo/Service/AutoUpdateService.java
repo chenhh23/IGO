@@ -12,6 +12,7 @@ import android.preference.PreferenceManager;
 
 import com.android.volley.Request;
 import com.android.volley.VolleyError;
+import com.example.pedometer.igo.Receiver.AutoUpdateReceiver;
 import com.example.pedometer.igo.Utils.HttpCallbackListener;
 import com.example.pedometer.igo.Utils.HttpUtil;
 import com.example.pedometer.igo.Utils.Utility;
@@ -33,7 +34,7 @@ public class AutoUpdateService extends Service {
         AlarmManager alarmManager = (AlarmManager)getSystemService(ALARM_SERVICE);
         int anHour = 8*60*60*1000;
         long triggerAtTime = SystemClock.elapsedRealtime()+anHour;
-        Intent i = new Intent(this,AutoUpdateService.class);
+        Intent i = new Intent(this,AutoUpdateReceiver.class);
         PendingIntent pi = PendingIntent.getBroadcast(this,0,i,0);
         alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP,triggerAtTime,pi);
         return super.onStartCommand(intent,flags,startId);
@@ -48,7 +49,6 @@ public class AutoUpdateService extends Service {
             public void onFinish(String str) {
                 Utility.handleWeatherResponse(AutoUpdateService.this,str);
             }
-
             @Override
             public void onError(VolleyError volleyError) {
                 volleyError.printStackTrace();

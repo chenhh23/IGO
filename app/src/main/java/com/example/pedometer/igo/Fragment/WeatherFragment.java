@@ -122,7 +122,6 @@ public class WeatherFragment extends Fragment {
                 } else if ("weatherCode".equals(type)) {
                     Log.d(TAG, "handleWeatherResponse");
                     Utility.handleWeatherResponse(getActivity(), response);
-                    Log.d(TAG, "handleWeatherResponseafter");
                     getActivity().runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -151,12 +150,9 @@ public class WeatherFragment extends Fragment {
         temp2Text.setText(prefs.getString("temp2",""));
         weatherDespText.setText(prefs.getString("weather_desp",""));
         publishText.setText("今天" + prefs.getString("publish_time", "") + "发布");
-        Log.d(TAG, prefs.getString("publish_time", ""));
         currentDateText.setText(prefs.getString("current_date", ""));
-        Log.d(TAG, prefs.getString("weather_desp", ""));
         weatherInfoLayout.setVisibility(View.VISIBLE);
         cityNameText.setVisibility(View.VISIBLE);
-        Log.d(TAG, "showWeatherafter");
         Intent intent = new Intent(getActivity(), AutoUpdateService.class);
         getActivity().startService(intent);
     }
